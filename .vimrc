@@ -27,3 +27,10 @@ set shiftwidth=4
 " Python mode options
 let g:pymode_folding=0 "Disable folding
 set completeopt=menu "Don't auto display docs
+
+" gvim otions
+:set guioptions-=m
+:set guioptions-=T
+:set guioptions-=r
+:set guioptions-=L
+
