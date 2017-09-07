@@ -40,3 +40,4 @@ set completeopt=menu "Don't auto display docs
 
 " Stop autoindentation on rst files
 autocmd FileType rst setlocal indentexpr=
+autocmd FileType rst setlocal comments+=b:-
