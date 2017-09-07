@@ -33,4 +33,10 @@ set completeopt=menu "Don't auto display docs
 :set guioptions-=T
 :set guioptions-=r
 :set guioptions-=L
+:set guifont=Consolas:h12:cANSI
 
+" 80 character line
+:set colorcolumn=80
+
+" Stop autoindentation on rst files
+autocmd FileType rst setlocal indentexpr=
