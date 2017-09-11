@@ -48,3 +48,11 @@ set completeopt=menu "Don't auto display docs
 " Stop autoindentation on rst files
 autocmd FileType rst setlocal indentexpr=
 autocmd FileType rst setlocal comments+=b:-,b:#
+
+" Ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
