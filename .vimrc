@@ -1,5 +1,12 @@
-execute pathogen#infect()
-Helptags " Make sure docs are up to date
+"execute pathogen#infect()
+call plug#begin('~/vimfiles/plugged')
+
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'vim-syntastic/syntastic'
+Plug 'SirVer/ultisnips'
+
+call plug#end()
 
 filetype plugin indent on
 syntax enable
