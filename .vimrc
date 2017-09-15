@@ -54,5 +54,10 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+" Syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_wq = 0
+
+" Ctrlp
+" Search path should be the cwd, or the file location
+let g:ctrlp_working_path_mode = 'a'
