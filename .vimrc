@@ -14,6 +14,7 @@ syntax enable
 " set colour scheme to solarized
 set background=dark
 colorscheme solarized
+set t_Co=256 " 256 colour mode for mintty problems
 
 " turn relative line numbering on
 set rnu
@@ -49,6 +50,7 @@ set completeopt=menu "Don't auto display docs
 autocmd FileType rst setlocal indentexpr=
 autocmd FileType rst setlocal comments+=b:-,b:#
 
+" Plugins
 " Ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
