@@ -1,10 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CustomKeySet derivedfrom="Windows" modifieddefault="false">
    <Context id="Global">
+      <Action id="clear-command-window">
+         <Stroke code="VK_L" ctrl="on"/>
+      </Action>
+      <Action id="caret-end-line">
+         <Stroke code="VK_END"/>
+         <Stroke code="VK_E" ctrl="on"/>
+      </Action>
+      <Action id="split-screen-left-right">
+         <Sequence>
+            <Stroke alt="on" code="VK_S" ctrl="on"/>
+            <Stroke alt="on" code="VK_H" ctrl="on"/>
+         </Sequence>
+         <Sequence>
+            <Stroke code="VK_S" ctrl="on" meta="on"/>
+            <Stroke code="VK_H" ctrl="on" meta="on"/>
+         </Sequence>
+      </Action>
+      <Action id="caret-next-word">
+         <Stroke code="VK_RIGHT" ctrl="on"/>
+         <Stroke code="VK_KP_RIGHT" ctrl="on"/>
+         <Stroke alt="on" code="VK_F"/>
+         <Stroke code="VK_F" meta="on"/>
+      </Action>
+      <Action id="exit-matlab"/>
+      <Action id="kill-line">
+         <Stroke code="VK_K" ctrl="on" shift="on"/>
+      </Action>
+      <Action id="caret-previous-word">
+         <Stroke code="VK_LEFT" ctrl="on"/>
+         <Stroke code="VK_KP_LEFT" ctrl="on"/>
+         <Stroke alt="on" code="VK_B"/>
+         <Stroke code="VK_B" meta="on"/>
+      </Action>
       <Action id="select-previous-tool">
          <Stroke code="VK_Q" ctrl="on"/>
       </Action>
-      <Action id="exit-matlab"/>
       <Action id="split-screen-top-bottom">
          <Sequence>
             <Stroke alt="on" code="VK_S" ctrl="on"/>
@@ -18,23 +50,17 @@
       <Action id="new-mfile">
          <Stroke code="VK_N" ctrl="on"/>
       </Action>
-      <Action id="split-screen-left-right">
-         <Sequence>
-            <Stroke alt="on" code="VK_S" ctrl="on"/>
-            <Stroke alt="on" code="VK_H" ctrl="on"/>
-         </Sequence>
-         <Sequence>
-            <Stroke code="VK_S" ctrl="on" meta="on"/>
-            <Stroke code="VK_H" ctrl="on" meta="on"/>
-         </Sequence>
-      </Action>
-   </Context>
-   <Context id="MATLABEditor">
-      <Action id="jump-list-prev"/>
-      <Action id="jump-list-next"/>
    </Context>
    <Context id="Explorer">
-      <Action id="jump-list-prev"/>
       <Action id="jump-list-next"/>
+      <Action id="jump-list-prev"/>
+   </Context>
+   <Context id="CommandWindow">
+      <Action id="caret-end-line"/>
+      <Action id="kill-line"/>
+   </Context>
+   <Context id="MATLABEditor">
+      <Action id="jump-list-next"/>
+      <Action id="jump-list-prev"/>
    </Context>
 </CustomKeySet>
