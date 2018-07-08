@@ -5,5 +5,9 @@
 	email = justinpinkney@gmail.com
 
 [core]
-	autocrlf = input
+	autocrlf = true
     filemode = false
+
+[alias]
+    s = status
+    ls = log --oneline --graph --decorate --all
