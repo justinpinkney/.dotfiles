@@ -5,6 +5,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-syntastic/syntastic'
 Plug 'SirVer/ultisnips'
+Plug 'davidhalter/jedi-vim'
 
 call plug#end()
 
