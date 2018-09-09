@@ -7,3 +7,7 @@
 [core]
 	autocrlf = input
     filemode = false
+
+[alias]
+    s = status
+    ls = log --oneline --graph --decorate --all
