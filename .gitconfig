@@ -5,7 +5,7 @@
 	email = justinpinkney@gmail.com
 
 [core]
-	autocrlf = true
+	autocrlf = input
     filemode = false
 
 [alias]
