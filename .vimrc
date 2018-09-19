@@ -64,3 +64,7 @@ let g:syntastic_check_on_wq = 0
 " Ctrlp
 " Search path should be the cwd, or the file location
 let g:ctrlp_working_path_mode = 'a'
+
+" F5 to run python file
+" http://ajmccluskey.com/2015/01/executing-your-code-from-vim/
+autocmd FileType python nnoremap <buffer> <F5> :exec '!clear; python' shellescape(@%, 1)<cr>
