@@ -15,3 +15,6 @@
     lsa = log --oneline --graph --decorate --all
     ba = branch --all
     aliases = "!git config -l | grep alias | cut -c 7-"
+    pom = push origin master
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-wincred.exe
