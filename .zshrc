@@ -93,8 +93,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias sshlab="ssh -L 8888:localhost:8888 -X"
 
+# set PATH so it includes user's private bin directories
+PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+export PATH=$PATH:$HOME/.local/bin
+
+# Set better colours for working in wsl
 LS_COLORS=$LS_COLORS:'ow=1;34:tw=1;34:'
 export LS_COLORS
 
 export PATH="/home/justin/.local/bin:$PATH"
+unsetopt AUTO_CD
