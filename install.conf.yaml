@@ -7,3 +7,4 @@
     ~/.vim: vim
     ~/.zshrc: zshrc
     ~/.tmux.conf: tmux.conf
+    ~/.config/fish/config.fish: config.fish

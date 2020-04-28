@@ -123,3 +123,28 @@ export PATH=$PATH:$HOME/.local/bin
 # Set better colours for working in wsl
 LS_COLORS=$LS_COLORS:'ow=1;34:tw=1;34:'; 
 export LS_COLORS
+
+# MY Aliases
+alias venv="source ./venv/bin/activate"
+alias addvenv="python -m ipykernel install --user --name venv --display-name "
+alias nb="venv/bin/jupyter-notebook"
+
+count() {
+    ls "$1" | wc -l
+}
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/justin/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/justin/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/justin/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/justin/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
