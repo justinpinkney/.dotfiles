@@ -8,3 +8,4 @@
     ~/.zshrc: zshrc
     ~/.tmux.conf: tmux.conf
     ~/.config/fish/config.fish: config.fish
+    ~/.todo/config: todo.cfg
