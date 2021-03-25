@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 DEFAULT_USER="justin"
 
 # Set list of themes to load
@@ -61,11 +61,14 @@ DEFAULT_USER="justin"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  dotenv
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+export CUDA_HOME=/usr/local/cuda-10.2
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -93,7 +96,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias sshlab="ssh -L 8888:localhost:8888 -X"
+alias flickup="/home/justin/code/flickup/venv/bin/python /home/justin/code/flickup/main.py"
+im2mov() {
+    ffmpeg -i $1 -c:v libx264 -vf fps=25 -pix_fmt yuv420p $2
+}
+
+mov2im() {
+    ffmpeg -i $1 -vf fps=$3 $2
+}
+
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
@@ -103,5 +114,19 @@ export PATH=$PATH:$HOME/.local/bin
 LS_COLORS=$LS_COLORS:'ow=1;34:tw=1;34:'
 export LS_COLORS
 
-export PATH="/home/justin/.local/bin:$PATH"
 unsetopt AUTO_CD
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/justin/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/justin/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/justin/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/justin/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup

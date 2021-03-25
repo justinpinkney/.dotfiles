@@ -18,3 +18,5 @@
     pom = push origin master
 [include]
     path = ~/.gitconfig.local
+[credential]
+	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
