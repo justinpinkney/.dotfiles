@@ -99,3 +99,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+system_type=$(uname -s)
+if [ "$system_type" = "Darwin" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
