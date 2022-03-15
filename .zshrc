@@ -96,37 +96,30 @@ export CUDA_HOME=/usr/local/cuda-10.2
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias flickup="/home/justin/code/flickup/venv/bin/python /home/justin/code/flickup/main.py"
 im2mov() {
     ffmpeg -i $1 -c:v libx264 -vf fps=25 -pix_fmt yuv420p $2
 }
 
 mov2im() {
     ffmpeg -i $1 -vf fps=$3 $2
+    chniad
+    
 }
 
 
-# set PATH so it includes user's private bin directories
-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-export PATH=$PATH:$HOME/.local/bin
-
-# Set better colours for working in wsl
-LS_COLORS=$LS_COLORS:'ow=1;34:tw=1;34:'
-export LS_COLORS
 
 unsetopt AUTO_CD
 
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/justin/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$("$HOME/miniconda3/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/justin/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/justin/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/justin/miniconda3/bin:$PATH"
+        export PATH="$HOME/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
