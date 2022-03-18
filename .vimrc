@@ -2,7 +2,6 @@
 call plug#begin('~/vimfiles/plugged')
 
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'altercation/vim-colors-solarized'
 Plug 'vim-syntastic/syntastic'
 Plug 'SirVer/ultisnips'
 Plug 'davidhalter/jedi-vim'
@@ -11,11 +10,6 @@ call plug#end()
 
 filetype plugin indent on
 syntax enable
-
-" set colour scheme to solarized
-set background=dark
-colorscheme solarized
-set t_Co=256 " 256 colour mode for mintty problems
 
 " turn relative line numbering on
 set rnu
