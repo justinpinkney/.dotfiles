@@ -106,6 +106,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ca="conda activate"
+alias va=". .venv/bin/activate"
+gpus() {
+    ssh $1 nvidia-smi -q -d UTILIZATION | grep Gpu
+}
 
 system_type=$(uname -s)
 if [ "$system_type" = "Darwin" ]; then
@@ -125,4 +130,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
