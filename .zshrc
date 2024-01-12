@@ -6,6 +6,13 @@ if [[ ! "$PATH" == */.fzf/bin* ]]; then
   export PATH="${PATH:+${PATH}:}$FZF_DIR/bin"
 fi
 
+
+TL_DIR="$HOME/tl"
+if [[ ! "$PATH" == */tl/scripts* ]]; then
+  export PATH="${PATH:+${PATH}:}$TL_DIR/scripts"
+fi
+
+
 source "$FZF_DIR/shell/completion.zsh"
 source "$FZF_DIR/shell/key-bindings.zsh"
 

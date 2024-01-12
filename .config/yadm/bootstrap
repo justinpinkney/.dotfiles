@@ -22,3 +22,5 @@ if [ "$system_type" = "Darwin" ]; then
 fi
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+
+git clone git@github.com:justinpinkney/tl.git
