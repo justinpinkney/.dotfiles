@@ -1,4 +1,3 @@
-brew "fzf"
 brew "wget"
 brew "tmux"
 brew "git-lfs"
